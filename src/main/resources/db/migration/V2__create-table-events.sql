@@ -5,5 +5,5 @@ CREATE TABLE events (
     location TEXT NOT NULL,
     type text NOT NULL,
     date TIMESTAMP NOT NULL,
-    img_url text NOT NULL
+    img_url text
 );

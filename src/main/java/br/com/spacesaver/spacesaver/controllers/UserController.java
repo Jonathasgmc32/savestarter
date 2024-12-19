@@ -4,6 +4,7 @@ import br.com.spacesaver.spacesaver.domain.user.User;
 import br.com.spacesaver.spacesaver.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +20,8 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public ResponseEntity<String> getUser(){
-        return ResponseEntity.ok("Sucesso!");
+    public ResponseEntity<Object> getUser(){
+        return ResponseEntity.ok(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
     }
     @GetMapping(value = {"/getUsers", "/{userId}"})
     public ResponseEntity<List<User>> getAllOrUnique(@PathVariable(required = false) String userId){

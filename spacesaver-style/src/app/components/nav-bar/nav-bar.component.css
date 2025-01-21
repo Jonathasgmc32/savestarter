@@ -1,0 +1,93 @@
+.nav-body{
+    display: flex;
+    flex-direction: column; 
+}
+
+.header {
+    background: linear-gradient(140deg, #D600B9, #055EFA);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header .menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 8px;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header .user-info span {
+    font-size: 1.2em; 
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .icons i {
+    color: white;
+    margin-right: 20px;
+}
+
+.side-menu {
+    background: linear-gradient(to bottom, #D600B9, #055EFA);
+    position: fixed;
+    top: 68px;
+    left: -70px;
+    width: 70px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    padding-top: 20px;
+    transition: left 0.3s;
+    z-index: 1000;
+}
+
+.side-menu i {
+    color: white;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.side-menu .menu-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.side-menu .menu-text i {
+    margin-right: 10px;
+}
+
+.menu-toggle {
+    position: relative; 
+    left: 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle i {
+    color: #ffffff;
+}

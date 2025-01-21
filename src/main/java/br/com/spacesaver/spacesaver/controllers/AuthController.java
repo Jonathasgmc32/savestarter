@@ -23,7 +23,7 @@ import java.util.Optional;
 public class AuthController {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final TokenService tokenService;
+    private final TokenService tokenService = new TokenService();
 
     @PostMapping("/login")
     public ResponseEntity Login(@RequestBody LoginRequestDTO body) {

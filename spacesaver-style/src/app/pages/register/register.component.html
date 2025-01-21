@@ -1,0 +1,29 @@
+<div class="register-container">
+    <div class="box-center-register">
+        <div class="background-register">
+            <h3> Cadastro </h3>
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+        <div class="register">
+            <label for="name">Seu Nome</label>
+            <input type="text" placeholder="Nome" formControlName="name">
+        </div>
+        <div class="register">
+            <label for="cpf">CPF</label>
+            <input type="number" placeholder="CPF" formControlName="cpf" min="0" max="99999999999">
+        </div>
+        <div class="register">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" formControlName="email">
+        </div>
+        <div class="register">
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Senha" formControlName="password">
+        </div>
+        <button type="submit" [disabled]="registerForm.invalid">Cadastrar</button>
+    </form>
+    <div class="link-login">
+        <p (click)="navigate()">Já tem uma conta? Faça login</p>
+    </div>
+    </div>
+    </div>
+</div>

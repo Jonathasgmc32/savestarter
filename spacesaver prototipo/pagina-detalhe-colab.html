@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Colaborador</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="side-menu" id="sideMenu">
+    <a href="index.html" class="menu-item">
+        <i class="fas fa-home fa-2x"></i>
+    </a>
+    <a href="pagina-servicos.html" class="menu-item">
+        <i class="fas fa-tags fa-2x"></i>
+    </a>
+    <a href="pagina-calendario.html" class="menu-item">
+        <i class="fas fa-calendar-alt fa-2x"></i>
+    </a>
+    <a href="pagina-colaboradores.html" class="menu-item">
+        <i class="fas fa-handshake fa-2x"></i>
+    </a>
+</div>
+
+<div class="header">
+    <button id="menuToggle" class="menu-toggle">
+        <i class="fas fa-bars fa-2x"></i>
+    </button>
+    <div class="user-info">
+        <span>Bom dia, Adriana</span>
+    </div>
+    <div class="icons">
+        <i class="fas fa-bell fa-2x"></i>
+        <i class="fas fa-user-circle fa-3x"></i>
+    </div>
+</div>
+
+<div class="container">
+    <div id="empresaDetails">
+        <img id="empresaImg" src="" alt="">
+        <h2 id="empresaNome"></h2>
+        <p id="empresaFraseEfeito"></p>
+        <p id="empresaBeneficios"></p><br>
+        <a id="empresaWebsite" href="" target="_blank">Visitar site da empresa</a> <div class="beneficios-container"><br>   
+    </div>
+    <h3>Benefícios</h3>
+    <div class="beneficios-container" class="fixed-section" id="fixedSection">
+        <div class="beneficio">
+            <h4>Vale-Refeição</h4>
+            <p>O vale-refeição é um benefício que permite aos colaboradores fazerem refeições em restaurantes e estabelecimentos credenciados, sem precisar utilizar dinheiro próprio. O valor do benefício é geralmente depositado em um cartão ou aplicativo específico.</p>
+        </div>
+        <div class="beneficio">
+            <h4>Plano de Saúde</h4>
+            <p>O plano de saúde oferece cobertura para consultas médicas, exames, internações e outros procedimentos de saúde, garantindo acesso a cuidados médicos de qualidade para o colaborador e, em alguns casos, para seus dependentes.</p>
+        </div>
+        <div class="beneficio" id="bonusContainer"> 
+            <h4>Bônus</h4>
+            <p id="empresaBonus">Acumule pontos por suas compras e troque por produtos exclusivos, experiências incríveis e muito mais!</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="scripts-detalhe-colab.js"></script>
+
+</body>
+</html>

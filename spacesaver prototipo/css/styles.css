@@ -1,0 +1,622 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+.header {
+    background: linear-gradient(to right, #D600B9, #055EFA);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header .menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 8px;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header .user-info span {
+    font-size: 1.2em; 
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .icons i {
+    color: white;
+    margin-right: 20px;
+}
+
+.container {
+    padding: 20px;
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    overflow-y: auto;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cards-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.card {
+    min-width: 200px;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.card img {
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+    max-width: 100%;
+    max-height: 130px;
+    height: auto;  
+    border-radius: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.card .content {
+    flex: 1;
+}
+
+.side-menu {
+    background: linear-gradient(to bottom, #D600B9, #055EFA);
+    position: fixed;
+    top: 68px;
+    left: -70px;
+    width: 70px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    padding-top: 20px;
+    transition: left 0.3s;
+    z-index: 1000;
+}
+
+.side-menu i {
+    color: white;
+    margin: 20px 0;
+}
+
+.side-menu .menu-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.side-menu .menu-text i {
+    margin-right: 10px;
+}
+
+
+.menu-toggle {
+    position: relative; 
+    left: 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle i {
+    color: #007bff;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.service {
+    width: 300px; 
+    margin: 10px; 
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block; 
+    text-align: center; 
+}
+
+.service h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.service p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.calendar-container {
+    flex-grow: 1;
+    max-height: 630px;
+}
+
+.calendar-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.month {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.month ul li {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: normal;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+}
+
+.weekdays li, .days li {
+    width: calc(100% / 7);
+    text-align: center;
+    margin: 5px;
+    padding: 10px 0;
+}
+
+.weekdays li {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666;
+    width: calc(100% / 8);
+    text-align: center;
+    margin: 5px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    flex: 1; 
+}
+
+
+.days li {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% / 8);
+    text-align: center;
+    margin: 15px;
+    padding: 10px 0;
+    box-sizing: border-box;
+
+}
+
+.days li.inactive {
+    color: #ccc;
+}
+
+.days li.active {
+    background-color: #00d084;
+    color: white;
+}
+
+.event {
+    background-color: #00d4ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.event h3 {
+    margin:10px;
+}
+
+.big-button {
+    background-color: #00d084;
+    font-weight: bold;
+    color: white;
+    padding: 15px 30px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease; 
+}
+
+.big-button:hover {
+    background-color: #00b56a; 
+}
+
+.filter {
+    font-size: 0.8em;
+    color: #666; 
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.event-list li {
+    flex-basis: calc(50% - 10px); 
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-list li .check-icon {
+    font-size: 1.2em;
+    color: #00d084;
+}
+
+.add-button {
+    background-color: #00d084;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+}
+
+.event-list li .check-icon {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0e0d0d;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.event-list li .check-icon:checked {
+    background-color: #00d084;
+    border-color: #00d084;
+}
+
+.event-list li .check-icon:checked::before {
+    content: "✓";
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.event-list li .event-name {
+    text-align: center;
+}
+
+.event-list li .event-date {
+    text-align: center; 
+    flex-grow: 1; 
+}
+
+#eventImg {
+    max-width: 100%;
+    height: auto;  
+    margin-bottom: 20px; 
+}
+
+.event-detail-img {
+    max-width: 100%;
+    height: auto; 
+    object-fit: cover; 
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+.event-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+#eventDetails {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#eventImg {
+    max-width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    max-height: 300px; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#eventTitle {
+    margin-bottom: 10px;
+}
+
+#eventDate, #eventParticipants, #eventDescription {
+    margin-bottom: 15px;
+}
+
+#eventParticipants {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#eventParticipants i {
+    margin-right: 5px;
+}
+
+.container2 {
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    height: 78vh; 
+    display: grid;
+    place-items: center;
+    align-items: center;
+    align-content: center;
+    justify-items: stretch;
+    justify-content: center;
+}
+
+.container2 h2 {
+    margin-bottom: 20px;
+}
+
+#agendamentoForm {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #00d65634, #00d5ff3f);
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="datetime-local"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00d656ce;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    color: #0e0d0d;
+    height: 100px;
+    resize: vertical;
+}
+
+.tipo-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tipo-button {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tipo-button.active {
+    background-color: #00d084;
+    color: white;
+}
+
+.icone-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icone-preview {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.icone-preview i {
+    font-size: 1.5em;
+}
+
+.data-hora-container {
+    margin-top: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#empresaDetails {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#empresaImg {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#empresaNome {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#empresaFraseEfeito {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#empresaBeneficios {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#empresaBeneficios li {
+    margin-bottom: 5px;
+}
+
+#empresaBeneficios li::before {
+    content: "\2022"; 
+    margin-right: 5px;
+}
+
+
+.beneficios-container {
+    display: flex;
+    gap: 20px;  
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;    
+}
+
+.beneficio h4 {
+    margin-top: 0;
+}
+
+#empresaWebsite {
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00d084;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    align-items: center;
+}

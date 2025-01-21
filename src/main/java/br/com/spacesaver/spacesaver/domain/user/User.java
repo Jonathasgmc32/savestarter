@@ -29,5 +29,51 @@ public class User {
     @JsonIgnore
     @ManyToMany(mappedBy = "event_users", fetch = FetchType.EAGER)
     private Set<Event> events = new HashSet<>();
+    
+    public String getEmail() {
+    	return this.email;
+    }
+    
+    public String getName() {
+    	return this.name;
+    }
+    
+    public String getCpf() {
+    	return this.cpf;
+    }
+    
+    public String getPassword() {
+    	return this.password;
+    }
+    
+    public void setEmail(String email) {
+    	this.email = email;
+    }
+    public void setName(String name) {
+    	this.name = name;
+    }
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Set<Event> getEvents() {
+		return events;
+	}
+
+	public void setEvents(Set<Event> events) {
+		this.events = events;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

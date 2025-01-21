@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Evento</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="side-menu" id="sideMenu">
+    <a href="index.html" class="menu-item">
+        <i class="fas fa-home fa-2x"></i>
+    </a>
+    <a href="pagina-servicos.html" class="menu-item">
+        <i class="fas fa-tags fa-2x"></i>
+    </a>
+    <a href="pagina-calendario.html" class="menu-item">
+        <i class="fas fa-calendar-alt fa-2x"></i>
+    </a>
+    <a href="pagina-colaboradores.html" class="menu-item">
+        <i class="fas fa-handshake fa-2x"></i>
+    </a>
+</div>
+
+<div class="header">
+    <button id="menuToggle" class="menu-toggle">
+        <i class="fas fa-bars fa-2x"></i>
+    </button>
+    <div class="user-info">
+        <span>Bom dia, Adriana</span>
+    </div>
+    <div class="icons">
+        <i class="fas fa-bell fa-2x"></i>
+        <i class="fas fa-user-circle fa-3x"></i>
+    </div>
+</div>
+
+<div class="container event-detail-container">
+    <div id="eventDetails">
+        <img id="eventImg" src="" alt="" class="event-detail-img">
+        <h2 id="eventTitle"></h2>
+        <p id="eventDescription"></p>
+        <p id="eventDate"></p>
+        <p id="eventParticipants"></p>
+        <button class="big-button">Participar</button>
+    </div>
+</div>
+
+<script src="scripts-detalhe-evento.js"></script>
+
+
+</body>
+</html>
